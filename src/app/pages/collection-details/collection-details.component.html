@@ -1,0 +1,20 @@
+<div class="collection-details">
+    <div class="collection-hero">
+        <img src="../../../assets/images/dri-fit.jpg.webp" alt="">
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let gridList of collectionList">
+            <a [routerLink]="['/collection',gridList.id]">
+                <img class="m-0" mat-card-image [src]="gridList.img">
+            </a>
+            <div class="card-content text-xl py-1.5">
+                {{gridList.content}}
+            </div>
+            <div class="price text-sm">
+                {{gridList.price}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+.slick-slider {
+
+    .slick-prev,
+    .slick-next {
+        background: black !important;
+    }
+}
+
+.view-all {
+    background: black;
+
+    &:hover {
+        transition: padding-right .3s, background .3s;
+        background: black url(../../../assets/images/button-arrow.png) no-repeat 81% 35%;
+        padding-right: 100px;
+        background-size: 29px;
+    }
+}
+
+.view-all :hover {
+    padding-right: 182px;
+}
+
+.slide {
+    width: 330px !important;
+}
+
+.slider-content {
+    line-height: 1.5;
+    padding: 10px 0 6px;
+}

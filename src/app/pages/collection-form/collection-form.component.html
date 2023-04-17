@@ -1,0 +1,26 @@
+<div class="container">
+  <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="form-group">
+      <label for="collectionURL"> Collection URL:</label>
+      <input type="text" class="form-control" id="collectionURL" name="collectionUrl" ngModel #collectionUrlInput="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="collectionURL"> Collection Content:</label>
+      <input type="text" class="form-control" id="collectionURL" name="collectionContent"  ngModel #collectionContentInput="ngModel">
+    </div>
+    <div class="form-group ">
+      <label for="collectionURL">Image:</label>
+      <input type="text" class="form-control" id="collectionURL" name="imgSrc" ngModel #imgSrcInput="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="collectionURL">Price:</label>
+      <input type="text" class="form-control" id="collectionURL"  name="price" ngModel #priceInput="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="collectionURL">Parent Id:</label>
+      <input type="text" class="form-control" id="parentId"  name="parentId" ngModel #parentIdInput="ngModel">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
+</div>

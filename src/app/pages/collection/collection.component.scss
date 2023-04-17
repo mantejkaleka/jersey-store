@@ -1,0 +1,46 @@
+.collection-container {
+    .section-grid {
+        margin: 0 auto;
+        max-width: 1300px;
+        padding: 0 40px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+
+        mat-grid-tile {
+            width: 19% !important;
+            cursor: pointer;
+
+            .grid-image {
+                height: 100%;
+                padding: 20px;
+                img {
+                    height: 100%;
+                }
+            }
+
+            .content-title {
+                position: absolute;
+                color: white;
+                font-size: 23px;
+                /* margin: 0 25px -166px; */
+                margin-top: 167px;
+                transition: bottom 0.5s ease;
+                &:hover {
+                    transform: scale(1.5);
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        mat-card {
+            img {
+                margin: 0;
+                height: 100%;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
