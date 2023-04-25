@@ -22,101 +22,66 @@ export class CollectionHomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.collectionItems = [{
-      content: 'Customized Jersey 011',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.40.30PM_360x.jpg?v=1677225646',
+      content: 'New Jersey 22/23',
+      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/Aregn3StarJersey02_360x.png?v=1673285104',
       price: 'Rs. 625'
     },
     {
-      content: 'Customized Jersey 001',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.46.28PM_360x.jpg?v=1677213133',
+      content: 'Argg (2 Star) Away Jersey 22/23',
+      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-01-16at15.29.25_360x.jpg?v=1673937011',
       price: 'Rs.625'
     },
     {
-      content: 'Customized Jersey 002',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.30.57PM_360x.jpg?v=1677224912',
+      content: 'Argg (2 Star) Home Jersey 22/23',
+      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/2STARFV_360x.jpg?v=1673936702',
       price: 'Rs.625'
     },
     {
-      content: 'Customized Jersey 003',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.30.58PM_360x.jpg?v=1677225035',
+      content: 'Argg CAMPEONES New Fan Version Jersey 22/23',
+      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-01-10at16.45.02_360x.jpg?v=1673353821',
       price: 'Rs.625'
     },
     {
-      content: 'Customized Jacket 001',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.46.00PM_360x.jpg?v=1677225794',
+      content: 'Por New Jersey 22/23',
+      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/84b58df1bb213e375d5236aab0d40455_360x.webp?v=1661159199',
       price: 'Rs.625'
     },
     {
-      content: 'Customized Jacket 002',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.46.13PM_2_360x.jpg?v=1677565363',
+      content: 'Itta New Season Jersey 22/23',
+      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/Italy-2022-home-jersey-3_360x.jpg?v=1664353527',
       price: 'Rs.625'
     },
     {
-      content: 'Customized Jacket 003',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.46.16PM_360x.jpg?v=1677576201',
-      price: 'Rs.625'
+      content: 'Brazilia New Jersey 22/23',
+      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/ac1f344c-min_360x.jpg?v=1665141402',
+      price: 'Rs.499'
     },
     {
-      content: 'Customized Jacket 004',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.46.44PM_360x.jpg?v=1677578666',
-      price: 'Rs.625'
+      content: 'Lion New Jersey 22/23',
+      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/d3c89cc9-min_360x.jpg?v=1669273202',
+      price: 'Rs.499'
     },
     {
-      content: 'Customized Jacket 005',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.46.49PM_360x.jpg?v=1677580256',
-      price: 'Rs.625'
+      content: 'Deutscher New Jersey 22/23',  
+      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/www.imagehandler_480x_14a09cf5-bb00-4751-8f1f-ee4a80f9ee13_360x.webp?v=1665234515',
+      price: 'Rs.499'
     },
     {
-      content: 'Customized Jersey 006',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.31.00PM_1_360x.jpg?v=1677225111',
-      price: 'Rs.625'
+      content: 'Les Bleus New Jersey 22/23',
+      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/e344772dd94bfc5c_360x.webp?v=1665646282',
+      price: 'Rs.499'
     },
     {
-      content: 'Customized Jersey 007',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.31.02PM_1_360x.jpg?v=1677225481',
-      price: 'Rs.625'
+      content: 'La Roja Fan Version 22/23',
+      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/Spain-Home-2022-Worldcup-Football-Jersey-1-scaled_360x.jpg?v=1668162578',
+      price: 'Rs.499'
     },
     {
-      content: 'Customized Jersey 008',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.31.02PM_360x.jpg?v=1677225510',
-      price: 'Rs.625'
-    },
-    {
-      content: 'Customized Jersey 009',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.40.26PM_360x.jpg?v=1677225536',
-      price: 'Rs.625'
-    },
-    {
-      content: 'Customized Jersey 010',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.40.27PM_360x.jpg?v=1677225580',
-      price: 'Rs.625'
-    },
-    {
-      content: 'Customized Jersey 012',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.40.28PM_360x.jpg?v=1677225607',
-      price: 'Rs.625'
-    },
-    {
-      content: 'Customized Jersey 013',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.41.26PM_360x.jpg?v=1677225672',
-      price: 'Rs.625'
-    },
-    {
-      content: 'Customized Jersey 014',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.45.56PM_1_360x.jpg?v=1677225697',
-      price: 'Rs.625'
-    },
-    {
-      content: 'Customized Jersey 015',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.45.56PM_360x.jpg?v=1677225727',
-      price: 'Rs.625'
-    },
-    {
-      content: 'Customized Jersey 018',
-      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/WhatsAppImage2023-02-11at4.45.59PM_360x.jpg?v=1677225756',
-      price: 'Rs.625'
+      content: 'Urbsfa Fan Version 22/23',
+      img: 'https://cdn.shopify.com/s/files/1/0612/6472/4149/products/Belgium-22-23-home-jersey-2_360x.jpg?v=1668162764',
+      price: 'Rs.499'
     }
-  ]
+    ]
   }
 
 
