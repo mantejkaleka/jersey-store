@@ -2,10 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CollectionCatalog, CollectionItem } from 'src/app/models/Collection.model';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 
-// const COLLECTION_BASE_URL = '/collectionItems';
-const COLLECTION_CATALOG_BASE_URL = 'https://jersey-store.onrender.com/api/collection';
+const COLLECTION_BASE_URL = 'https://jersey-store.onrender.com/api/collection/collectionItems';
+const COLLECTION_CATALOG_BASE_URL = 'https://jersey-store.onrender.com/api/collection/collectionCatalog';
 
 @Injectable({
   providedIn: 'root'
@@ -90,7 +89,7 @@ export class CollectionService {
   // ];
 
   getAllCollectionItems(): Observable<Array<CollectionItem>> {
-    return this.httpClient.get<Array<CollectionItem>>(`${environment.baseURL}/collectionItems`);
+    return this.httpClient.get<Array<CollectionItem>>(`${COLLECTION_BASE_URL}`);
   }
 
   addCollectionItems(collectionItems: CollectionItem): void {
@@ -112,10 +111,10 @@ export class CollectionService {
   }
 
   getCollectionCatalog(): Observable<Array<CollectionCatalog>> {
-    return this.httpClient.get<Array<CollectionCatalog>>(`${environment.baseURL}/collectionCatalog`);
+    return this.httpClient.get<Array<CollectionCatalog>>(`${COLLECTION_CATALOG_BASE_URL}`);
   }
 
   getCollectionCatalogById(id: String): Observable<CollectionCatalog> {
-    return this.httpClient.get<CollectionCatalog>(`${environment.baseURL}/collectionCatalog/${id}`);
+    return this.httpClient.get<CollectionCatalog>(`${COLLECTION_CATALOG_BASE_URL}/${id}`);
   }
 }
