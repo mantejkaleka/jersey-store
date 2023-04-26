@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { CollectionCatalog, CollectionItem } from 'src/app/models/Collection.model';
 import { Observable } from 'rxjs';
 
-const COLLECTION_BASE_URL = 'http://localhost:3000/api/collection/collectionItems';
-const COLLECTION_CATALOG_BASE_URL = 'http://localhost:3000/api/collection/collectionCatalog';
+const COLLECTION_BASE_URL = 'https://jersey-store.onrender.com/api/collection/collectionItems';
+const COLLECTION_CATALOG_BASE_URL = 'https://jersey-store.onrender.com/api/collection/collectionCatalog';
 
 @Injectable({
   providedIn: 'root'
