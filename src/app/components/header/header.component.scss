@@ -1,5 +1,6 @@
 .mat-toolbar {
     background-color: white;
+
     .header-item-navigation {
         color: black;
     }
@@ -14,5 +15,34 @@
         font-size: 22px;
         font-weight: 400;
         letter-spacing: 0.425px;
+    }
+}
+
+.cart-content {
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+}
+
+.offcanvas-header {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    border-bottom: 1px solid grey;
+}
+
+.offcanvas-body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid grey;
+    .cart-body-container {
+        font-size: 1.172em;    
+        img {
+            min-height: 100px;
+            max-height: 200px;
+        }
+
+        input {
+            width: 50px;
+            border-radius: initial !important;
+        }
     }
 }

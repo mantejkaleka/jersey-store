@@ -6,11 +6,12 @@
     <div class="section-grid min-height-full">
         <mat-grid-list cols="5" rowHeight="300px">
             <mat-grid-tile *ngFor="let gridList of collectionGrid" [routerLink]="['/collection',gridList._id]">
-                   <div class="grid-image">
+                   
+                <div class="grid-image">
                     <img [src]="gridList.img">
                    </div> 
                   <div class="content-title">
-                    {{gridList.id}}
+                    {{gridList.title}}
                 </div>
             </mat-grid-tile>
           </mat-grid-list>

@@ -124,8 +124,6 @@ export class CollectionComponent implements OnInit {
     this.collectionService.getCollectionCatalog()
     .subscribe((_items) => {
       this.collectionGrid = _items;
-      console.log(this.collectionGrid);
-
     })
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CollectionService } from 'src/services/collection.service';
 
 @Component({
   selector: 'app-header',
@@ -6,28 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  itemQuantity  = 0;
+  subtotal: number = 0;
 
-  constructor() { }
+  constructor(
+    private collectionService: CollectionService
+  ) { }
+
+  price: number = 100;
 
   ngOnInit(): void {
+    this.getCollectionMenu();
   }
 
-  collectionMenu = ['Fan Version 22/23 Jerseys', 'Player Version 22 / 23 Jerseys', 'International Jerseys 22/23', 'Printed Fan Version',
-    'Club Jackets',
-    'Football Hoodies',
-    'Club Bottles',
-    'Kids Jerseys 22/23',
-    'Club Scarfs',
-    'Activewear',
-    'Club Badges',
-    'Club Stickers',
-    'Football T-Shirt',
-    'Football Mugs',
-    'Club Polo T-shirts',
-    'Wooden Crests',
-    'T20 Stickers',
-    'Club Caps'
-  ];
+  collectionMenu : Array<any> | undefined;
   formContent = [{
     title: 'add collection items',
     url: 'collectionForm'
@@ -37,4 +30,29 @@ export class HeaderComponent implements OnInit {
     url: 'collectionHomeForm'
   },
   ];
+
+  private getCollectionMenu():void {
+    this.collectionService.getCollectionCatalog()
+    .subscribe((_items) => {
+      this.collectionMenu = _items;
+      console.log('collection menu', this.collectionMenu);
+    })
+  }
+
+  addRemovItem(action: string) {
+    
+    switch(action) {
+      case 'remove':{
+        this.itemQuantity-=1;
+        this.subtotal-=this.price;
+        if(this.itemQuantity < 0) {
+          this.itemQuantity = 0;
+        }
+      }     
+        break;
+        case 'add':  
+          this.itemQuantity+=1;
+          this.subtotal+=this.price;
+    }
+  }
 }

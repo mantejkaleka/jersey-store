@@ -4,7 +4,7 @@
         <button mat-button routerLink="home">Home</button>
 <button mat-button [matMenuTriggerFor]="belowMenu" routerLink="collection">Collections <mat-icon>expand_more</mat-icon></button>
 <mat-menu #belowMenu="matMenu" yPosition="below">
-  <button mat-menu-item *ngFor="let menuItem of collectionMenu">{{menuItem}}</button>
+  <button mat-menu-item *ngFor="let menuItem of collectionMenu" [routerLink]="['/collection',menuItem._id]">{{menuItem.title}}</button>
 </mat-menu>
 
 <button mat-button >About US</button>
@@ -17,34 +17,39 @@
   </mat-menu>
 
     </div>
-    <button mat-icon-button [matMenuTriggerFor]="menu">
+    <button mat-icon-button data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
         <mat-icon [matBadge]="1" [matBadgeHidden]="false" matBadgeColor="warn">shopping_cart
         </mat-icon>
     </button>
-    <mat-menu #menu class="w-64 bg-white">
-        <div class="p-3 divide-y divide-solid">
-            <div class="pb-3 flex justify-between">
-                <span class="mr-16">1 item</span>
-                <a routerLink="cart">Cart</a>
-            </div>
-            <div class="py-3">
-                <div class="flex justify-between font-light mb-2">
-                    item X Quantity
-                    <span class="font-bold">{{ 100 | currency}}</span>
-                </div>
-            </div>
-            <div class="flex justify-between py-3 font-light">
-                Total: <span class="font-bold">{{100 | currency}}</span>
-            </div>
-            <div class="py-3 flex justify-between">
-                <button class="bg-rose-600 text-white rounded-full w-9 h-9">
-                    <mat-icon>remove_shopping_cart</mat-icon>
-                </button>
-                <button class="bg-green-600 text-white rounded-full w-9 h-9">
-                    <mat-icon>add_shopping_cart</mat-icon>
-                </button>
-            </div>
-        </div>
-    </mat-menu>
   </mat-toolbar>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+   <div class="container cart-content">
+    <div class="offcanvas-header">
+        <h2 class="offcanvas-title divide-x" id="offcanvasExampleLabel">Cart</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="row cart-body-container">
+         <div class="col-4 cart-img">
+            <img src="../../../assets/images/collection_card_cotton_tshirsts.webp" alt="">
+         </div>
+         <div class="col-8">
+            Al Nassr Ronaldo Home Fan Version Jersey
+            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group me-2" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-outline-secondary" (click)="addRemovItem('remove')"><i class="bi bi-dash-lg" ></i></button>
+                    <input type="text" class="form-control" aria-describedby="btnGroupAddon" [ngModel]="itemQuantity">      
+                  <button type="button" class="btn btn-outline-secondary" (click)="addRemovItem('add')"><i class="bi bi-plus-lg"></i></button>
+                 <span class="item-price pl-2 pt-2 font-bold">{{price | currency:'INR'}}</span>
+                </div>
+         </div>
+        </div>
+      </div>
   
+   </div>
+   <div class="row total-amount">
+    <span class="col-6 font-bold">SUBTOTAL</span>
+    <span class="col-6 text-end font-bold">{{subtotal | currency:'INR'}}</span>
+  </div>
+  
+  </div>
