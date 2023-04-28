@@ -2,7 +2,9 @@
     <img routerLink="home" src="//cdn.shopify.com/s/files/1/0612/6472/4149/files/logo_100x.webp?v=1648280596" alt="">
     <div class="header-item-navigation">
         <button mat-button routerLink="home">Home</button>
-<button mat-button [matMenuTriggerFor]="belowMenu" routerLink="collection">Collections <mat-icon>expand_more</mat-icon></button>
+<button mat-button [matMenuTriggerFor]="belowMenu"
+#levelOneTrigger="matMenuTrigger" (mouseenter)="levelOneTrigger.openMenu()"
+ routerLink="collection">Collections <mat-icon>expand_more</mat-icon></button>
 <mat-menu #belowMenu="matMenu" yPosition="below">
   <button mat-menu-item *ngFor="let menuItem of collectionMenu" [routerLink]="['/collection',menuItem._id]">{{menuItem.title}}</button>
 </mat-menu>
