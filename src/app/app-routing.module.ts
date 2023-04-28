@@ -5,6 +5,7 @@ import { CollectionComponent } from './pages/collection/collection.component';
 import { CollectionFormComponent } from './pages/collection-form/collection-form.component';
 import { CollectionDetailsComponent } from './pages/collection-details/collection-details.component';
 import { CollectionHomeComponent } from './pages/collection-home/collection-home.component';
+import { ItemDetailsComponent } from './pages/item-details/item-details.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,9 @@ const routes: Routes = [
   },
   {
     path:'collectionHomeForm', component: CollectionHomeComponent
+  },
+  {
+    path:'itemDetails/:id', component: ItemDetailsComponent
   }
 ];
 

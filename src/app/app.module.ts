@@ -32,7 +32,9 @@ import { CollectionFormComponent } from './pages/collection-form/collection-form
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { CollectionHomeComponent } from './pages/collection-home/collection-home.component';
+import { ItemDetailsComponent } from './pages/item-details/item-details.component';
 
 
 @NgModule({
@@ -47,6 +49,7 @@ import { CollectionHomeComponent } from './pages/collection-home/collection-home
     CollectionDetailsComponent,
     CollectionFormComponent,
     CollectionHomeComponent,
+    ItemDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,7 +72,8 @@ import { CollectionHomeComponent } from './pages/collection-home/collection-home
     HttpClientModule,
     FormsModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,12 @@
-<div class="collection-details">
+<div class="collection-details" *ngIf="catalog">
     <div class="collection-hero">
-        <img src="../../../assets/images/dri-fit.jpg.webp" alt="">
+        <img [src]="catalog.img" alt="" class="p-0">
     </div>
 </div>
-<div class="container">
+<div class="container pt-24">
     <div class="row">
-        <div class="col-md-3" *ngFor="let gridList of collectionList">
-            <a [routerLink]="['/collection',gridList.id]">
+        <div class="col-md-3 p-7 grid-item-container" *ngFor="let gridList of collectionList">
+            <a [routerLink]="['/itemDetails',gridList._id]" (click)="getCollectionDetails(gridList)">
                 <img class="m-0" mat-card-image [src]="gridList.img">
             </a>
             <div class="card-content text-xl py-1.5">
